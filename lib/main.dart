@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mathapp/enroll_quiz/daftar_quiz.dart';
 import 'package:mathapp/enroll_quiz/enrol_quiz.dart';
 import 'package:mathapp/list_materi/list_materi_page.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 void main() {
   runApp(
@@ -63,11 +64,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     "Material",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.pangolin(
-                       color: Colors.white, fontSize: 28
-                    ),
+                       color: Colors.white, fontSize: 28),
                   ),
                   decoration: const BoxDecoration(
-                    color: Colors.black,
+                    color: Color.fromARGB(255, 160, 188, 194), // #A0BCC2
                     borderRadius: BorderRadius.all(Radius.circular(20.0)),
                     boxShadow: [
                       BoxShadow(
@@ -98,12 +98,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     "Quiz",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.pangolin(
-                      color: Colors.black, fontSize: 28
+                      color: Color.fromARGB(255, 160, 188, 194), fontSize: 28 // #A0BCC2
                     ),
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(width: 2, color: Colors.black),
+                    border: Border.all(width: 2, 
+                    color: Color.fromARGB(255, 160, 188, 194)), // #A0BCC2
                     borderRadius: BorderRadius.all(Radius.circular(20.0)),
                     boxShadow: [
                       BoxShadow(

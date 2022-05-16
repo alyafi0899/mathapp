@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mathapp/enroll_quiz/daftar_quiz.dart';
 import 'package:mathapp/enroll_quiz/enrol_quiz.dart';
 import 'package:mathapp/list_materi/list_materi_page.dart';
@@ -59,9 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 80,
                   ),
                   child: Text(
-                    "Materi",
+                    "Material",
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 28),
+                    style: GoogleFonts.pangolin(
+                       color: Colors.white, fontSize: 28
+                    ),
                   ),
                   decoration: const BoxDecoration(
                     color: Colors.black,
@@ -94,7 +97,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(
                     "Quiz",
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.black, fontSize: 28),
+                    style: GoogleFonts.pangolin(
+                      color: Colors.black, fontSize: 28
+                    ),
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Enroll extends StatefulWidget {
   const Enroll({Key? key}) : super(key: key);
@@ -47,7 +48,7 @@ class _Enroll extends State<Enroll> {
                 child: Container(
                   child: Text(
                     "Tulbar",
-                    style: TextStyle(fontSize: 36),
+                    style: GoogleFonts.pangolin(fontSize: 36),
                     textAlign: TextAlign.left,
                   ),
                 ),

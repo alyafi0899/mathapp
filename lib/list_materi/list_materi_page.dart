@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ListMateri extends StatefulWidget {
   const ListMateri({Key? key}) : super(key: key);
@@ -20,7 +21,9 @@ class _ListMateri extends State<ListMateri> {
               child: Container(
                 child: Text(
                   "List Materi",
-                  style: TextStyle(fontSize: 36),
+                  style: GoogleFonts.pangolin(
+                    fontSize: 36
+                  ),
                   textAlign: TextAlign.left,
                 ),
               ),
@@ -31,6 +34,7 @@ class _ListMateri extends State<ListMateri> {
               child: Container(
                 child: Text(
                   "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+                  style: GoogleFonts.pangolin(),
                   textAlign: TextAlign.left,
                 ),
               ),
@@ -48,7 +52,7 @@ class _ListMateri extends State<ListMateri> {
                   child: Text(
                     "Penjumlahan",
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.black, fontSize: 28),
+                    style: GoogleFonts.pangolin(color: Colors.black, fontSize: 28),
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -82,7 +86,7 @@ class _ListMateri extends State<ListMateri> {
                   child: Text(
                     "Aljabar",
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.black, fontSize: 28),
+                    style: GoogleFonts.pangolin(color: Colors.black, fontSize: 28),
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,

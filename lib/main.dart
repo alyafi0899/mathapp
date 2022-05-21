@@ -4,6 +4,7 @@ import 'package:mathapp/enroll_quiz/daftar_quiz.dart';
 import 'package:mathapp/enroll_quiz/enrol_quiz.dart';
 import 'package:mathapp/list_materi/list_materi_page.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:mathapp/styles.dart';
 
 void main() {
   runApp(
@@ -46,82 +47,107 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: EdgeInsets.fromLTRB(20, 275, 20, 20),
-        child: Column(
-          children: [
-            InkWell(
-              child: Container(
-                padding: const EdgeInsets.all(10),
-                child: Container(
-                  padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
-                  // 2
-                  constraints: const BoxConstraints.expand(
-                    width: 300,
-                    height: 80,
-                  ),
-                  child: Text(
-                    "Material",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.pangolin(
-                       color: Colors.white, fontSize: 28),
-                  ),
-                  decoration: const BoxDecoration(
-                    color: Color.fromARGB(255, 160, 188, 194), // #A0BCC2
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xFFBDBDBD),
-                        spreadRadius: 0.0001,
-                        blurRadius: 10,
-                        offset: Offset(5, 5), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              onTap: () {
-                Navigator.pushNamed(context, '/list_materi');
-              },
+      body: Center(
+        child: Container(
+          constraints: BoxConstraints.expand(width: double.infinity),
+          decoration: BoxDecoration(
+              color: Colors.white,
+              image: DecorationImage(
+                  image: AssetImage('assets/Dashboard.png'),
+                  alignment: Alignment.topCenter,
+                  // scale: 2.1,
+                  fit: BoxFit.fill),
             ),
-            InkWell(
-              child: Container(
-                padding: const EdgeInsets.all(30),
+          padding: EdgeInsets.fromLTRB(0, 171, 0, 20),
+          child: Column(
+            children: [
+              // Logo MtkApp 1 
+              Container(
+                width: 178,
+                height: 172,
+                decoration: BoxDecoration(
+              color: Colors.white,
+              image: DecorationImage(
+                  image: AssetImage('assets/Logo MtkApp.png'),
+                  alignment: Alignment.topCenter,
+                  scale: 2.1,
+                  fit: BoxFit.cover),
+            ),
+              ),
+              InkWell(
                 child: Container(
-                  padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
-                  // 2
-                  constraints: const BoxConstraints.expand(
-                    width: 300,
-                    height: 80,
-                  ),
-                  child: Text(
-                    "Quiz",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.pangolin(
-                      color: Color.fromARGB(255, 160, 188, 194), fontSize: 28 // #A0BCC2
+                  padding: const EdgeInsets.fromLTRB(0, 64, 0, 0),
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
+                    // 2
+                    constraints: const BoxConstraints.expand(
+                      width: 280,
+                      height: 64,
+                    ),
+                    child: Text(
+                      "Material",
+                      textAlign: TextAlign.center,
+                      style: blackStyle.copyWith(
+                          color: kwhiteColor,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                         ),
+                    ),
+                    decoration: const BoxDecoration(
+                      color: Color.fromARGB(255, 0, 110, 127), // #A0BCC2
+                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0xFFBDBDBD),
+                          spreadRadius: 0.0001,
+                          blurRadius: 10,
+                          offset: Offset(5, 5), // changes position of shadow
+                        ),
+                      ],
                     ),
                   ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(width: 2, 
-                    color: Color.fromARGB(255, 160, 188, 194)), // #A0BCC2
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xFFBDBDBD),
-                        spreadRadius: 0.0001,
-                        blurRadius: 10,
-                        offset: Offset(5, 5), // changes position of shadow
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/list_materi');
+                },
+              ),
+              InkWell(
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
+                    // 2
+                    constraints: const BoxConstraints.expand(
+                      width: 280,
+                      height: 64,
+                    ),
+                    child: Text(
+                      "Quiz",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.pangolin(
+                        color: Color(0xffffffff), fontSize: 28 // #A0BCC2
                       ),
-                    ],
+                    ),
+                    decoration: BoxDecoration( 
+                      color: Color.fromARGB(255, 208, 106, 95), // #A0BCC2
+                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0xFFBDBDBD),
+                          spreadRadius: 0.0001,
+                          blurRadius: 10,
+                          offset: Offset(5, 5), // changes position of shadow
+                        ),
+                      ],
+                    ),
                   ),
                 ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/list_materi');
+                },
               ),
-              onTap: () {
-                Navigator.pushNamed(context, '/list_materi');
-              },
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

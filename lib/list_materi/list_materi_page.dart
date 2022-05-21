@@ -49,10 +49,26 @@ class _ListMateri extends State<ListMateri> {
                     width: 300,
                     height: 80,
                   ),
-                  child: Text(
-                    "Penjumlahan",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.pangolin(color: Colors.black, fontSize: 28),
+                  child: Row(
+                    children: [Container(
+                      height: 28,
+                      width: 28,
+                      decoration: BoxDecoration(
+              color: Colors.white,
+              image: DecorationImage(
+                  image: AssetImage('assets/IconBangundatar.png'),
+                  alignment: Alignment.topCenter,
+                  // scale: 2.1,
+                  fit: BoxFit.fill),
+            ),
+                    ),
+                    SizedBox(width: 16,),
+                      Text(
+                        "Penjumlahan",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.pangolin(color: Colors.black, fontSize: 28),
+                      ),
+                    ],
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 const Color kprimeColor = Color.fromARGB(255, 0, 110, 127);
-const Color ksecondColor = Color(0xfD06B5F);
+const Color ksecondColor = Color.fromARGB(255, 208, 106, 95);
 const Color kwhiteColor = Color(0xffffffff);
 const Color kblackColor = Color(0xff3A3A3A);
 const Color kpinkColor = Color(0xffFF70A3);
@@ -14,8 +14,23 @@ const kbackground = LinearGradient(
   ],
 );
 
+// Textstyle
+
+TextStyle headlinesmall = GoogleFonts.poppins(
+  fontSize: 24
+);
+
+TextStyle headlinelarge = GoogleFonts.poppins(
+  fontSize: 32
+);
+
+TextStyle bodysmall = GoogleFonts.poppins(
+  fontSize: 16
+);
+
 TextStyle whiteStyle = GoogleFonts.poppins(
   color: kwhiteColor,
+  fontSize: 24
 );
 
 TextStyle blackStyle = GoogleFonts.poppins(

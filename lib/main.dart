@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   // scale: 2.1,
                   fit: BoxFit.fill),
             ),
-          padding: EdgeInsets.fromLTRB(0, 171, 0, 20),
+          padding: EdgeInsets.fromLTRB(0, 156, 0, 20),
           child: Column(
             children: [
               // Logo MtkApp 1 
@@ -124,9 +124,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Text(
                       "Quiz",
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.pangolin(
-                        color: Color(0xffffffff), fontSize: 28 // #A0BCC2
+                      style: headlinesmall.copyWith(
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.bold
                       ),
+                      
                     ),
                     decoration: BoxDecoration( 
                       color: Color.fromARGB(255, 208, 106, 95), // #A0BCC2

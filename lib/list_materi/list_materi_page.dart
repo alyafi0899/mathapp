@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mathapp/styles.dart';
 
 class ListMateri extends StatefulWidget {
   const ListMateri({Key? key}) : super(key: key);
@@ -13,6 +14,14 @@ class _ListMateri extends State<ListMateri> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+      decoration: BoxDecoration(
+              color: Colors.white,
+              image: DecorationImage(
+                  image: AssetImage('assets/List materi.png'),
+                  alignment: Alignment.topCenter,
+                  // scale: 2.1,
+                  fit: BoxFit.fill),
+            ),
         padding: EdgeInsets.fromLTRB(20, 100, 20, 20),
         child: Column(
           children: [
@@ -21,10 +30,10 @@ class _ListMateri extends State<ListMateri> {
               child: Container(
                 child: Text(
                   "List Materi",
-                  style: GoogleFonts.pangolin(
-                    fontSize: 36
-                  ),
-                  textAlign: TextAlign.left,
+                  style: headlinelarge.copyWith(
+                        color: Color.fromARGB(255, 255, 255, 255)
+                  )
+                  
                 ),
               ),
             ),
@@ -34,7 +43,9 @@ class _ListMateri extends State<ListMateri> {
               child: Container(
                 child: Text(
                   "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-                  style: GoogleFonts.pangolin(),
+                  style: bodysmall.copyWith(
+                    color: Color.fromARGB(255, 255, 255, 255)
+                  ),
                   textAlign: TextAlign.left,
                 ),
               ),
@@ -64,24 +75,19 @@ class _ListMateri extends State<ListMateri> {
                     ),
                     SizedBox(width: 16,),
                       Text(
-                        "Penjumlahan",
+                        "Bangun Datar",
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.pangolin(color: Colors.black, fontSize: 28),
+                        style: headlinesmall.copyWith(
+                          color: Color.fromARGB(255, 0, 110, 127)
+                        ),
                       ),
                     ],
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(width: 2, color: Colors.black),
+                    border: Border.all(width: 2, color: Color.fromARGB(255, 0, 110, 127)),
                     borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xFFBDBDBD),
-                        spreadRadius: 0.0001,
-                        blurRadius: 10,
-                        offset: Offset(5, 5), // changes position of shadow
-                      ),
-                    ],
+                    
                   ),
                 ),
               ),
@@ -102,20 +108,14 @@ class _ListMateri extends State<ListMateri> {
                   child: Text(
                     "Aljabar",
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.pangolin(color: Colors.black, fontSize: 28),
+                    style: headlinesmall.copyWith(color: Color.fromARGB(255, 0, 110, 127)),
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(width: 2, color: Colors.black),
+                    border: Border.all(width: 2, color: Color.fromARGB(255, 0, 110, 127)),
                     borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xFFBDBDBD),
-                        spreadRadius: 0.0001,
-                        blurRadius: 10,
-                        offset: Offset(5, 5), // changes position of shadow
-                      ),
-                    ],
+                   
+                  
                   ),
                 ),
               ),

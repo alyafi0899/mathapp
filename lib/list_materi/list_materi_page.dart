@@ -14,27 +14,23 @@ class _ListMateri extends State<ListMateri> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-      decoration: BoxDecoration(
-              color: Colors.white,
-              image: DecorationImage(
-                  image: AssetImage('assets/List materi (1).png'),
-                  alignment: Alignment.topCenter,
-                  // scale: 2.1,
-                  fit: BoxFit.fill),
-            ),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          image: DecorationImage(
+              image: AssetImage('assets/List materi (1).png'),
+              alignment: Alignment.topCenter,
+              // scale: 2.1,
+              fit: BoxFit.fill),
+        ),
         padding: EdgeInsets.fromLTRB(20, 80, 20, 20),
         child: Column(
           children: [
             SizedBox(
               width: double.infinity,
               child: Container(
-                child: Text(
-                  "List Materi",
-                  style: headlinelarge.copyWith(
-                        color: Color.fromARGB(255, 255, 255, 255)
-                  )
-                  
-                ),
+                child: Text("List Materi",
+                    style: headlinelarge.copyWith(
+                        color: Color.fromARGB(255, 255, 255, 255))),
               ),
             ),
             SizedBox(
@@ -44,8 +40,7 @@ class _ListMateri extends State<ListMateri> {
                 child: Text(
                   "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
                   style: bodysmall.copyWith(
-                    color: Color.fromARGB(255, 255, 255, 255)
-                  ),
+                      color: Color.fromARGB(255, 255, 255, 255)),
                   textAlign: TextAlign.left,
                 ),
               ),
@@ -61,33 +56,35 @@ class _ListMateri extends State<ListMateri> {
                     height: 64,
                   ),
                   child: Row(
-                    children: [Container(
-                      height: 28,
-                      width: 28,
-                      decoration: BoxDecoration(
-              color: Colors.white,
-              image: DecorationImage(
-                  image: AssetImage('assets/IconBangundatar.png'),
-                  alignment: Alignment.topCenter,
-                  // scale: 2.1,
-                  fit: BoxFit.fill),
-            ),
-                    ),
-                    SizedBox(width: 16,),
+                    children: [
+                      Container(
+                        height: 28,
+                        width: 28,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          image: DecorationImage(
+                              image: AssetImage('assets/IconBangundatar.png'),
+                              alignment: Alignment.topCenter,
+                              // scale: 2.1,
+                              fit: BoxFit.fill),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 16,
+                      ),
                       Text(
                         "Bangun Datar",
                         textAlign: TextAlign.center,
                         style: headlinesmall.copyWith(
-                          color: Color.fromARGB(255, 0, 110, 127)
-                        ),
+                            color: Color.fromARGB(255, 0, 110, 127)),
                       ),
                     ],
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(width: 2, color: Color.fromARGB(255, 0, 110, 127)),
+                    border: Border.all(
+                        width: 2, color: Color.fromARGB(255, 0, 110, 127)),
                     borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    
                   ),
                 ),
               ),
@@ -97,41 +94,50 @@ class _ListMateri extends State<ListMateri> {
             ),
             InkWell(
               child: Container(
-                padding: const EdgeInsets.all(30),
+                padding: const EdgeInsets.all(10),
                 child: Container(
-                  padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
+                  padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
                   // 2
                   constraints: const BoxConstraints.expand(
-                    width: 300,
-                    height: 80,
+                    width: 280,
+                    height: 64,
                   ),
                   child: Row(
-                    children: [Container(
-                      height: 28,
-                      width: 28,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        image: DecorationImage(
-                        image: AssetImage('assets/IconBangundatar.png'),
-                        alignment: Alignment.topCenter,
-                        fit: BoxFit.fill),
+                    children: [
+                      Container(
+                        height: 28,
+                        width: 28,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          image: DecorationImage(
+                              image: AssetImage('assets/IconBangundatar.png'),
+                              alignment: Alignment.topCenter,
+                              // scale: 2.1,
+                              fit: BoxFit.fill),
+                        ),
                       ),
-                  ),
-                  child: Text(
-                    "Aljabar",
-                    textAlign: TextAlign.center,
-                    style: headlinesmall.copyWith(color: Color.fromARGB(255, 0, 110, 127)),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Text(
+                        "Aljabar",
+                        textAlign: TextAlign.center,
+                        style: headlinesmall.copyWith(
+                            color: Color.fromARGB(255, 0, 110, 127)),
+                      ),
+                    ],
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(width: 2, color: Color.fromARGB(255, 0, 110, 127)),
+                    border: Border.all(
+                        width: 2, color: Color.fromARGB(255, 0, 110, 127)),
                     borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                   
-                  
                   ),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/enroll');
+              },
             ),
           ],
         ),

@@ -17,12 +17,12 @@ class _ListMateri extends State<ListMateri> {
       decoration: BoxDecoration(
               color: Colors.white,
               image: DecorationImage(
-                  image: AssetImage('assets/List materi.png'),
+                  image: AssetImage('assets/List materi (1).png'),
                   alignment: Alignment.topCenter,
                   // scale: 2.1,
                   fit: BoxFit.fill),
             ),
-        padding: EdgeInsets.fromLTRB(20, 100, 20, 20),
+        padding: EdgeInsets.fromLTRB(20, 80, 20, 20),
         child: Column(
           children: [
             SizedBox(
@@ -54,11 +54,11 @@ class _ListMateri extends State<ListMateri> {
               child: Container(
                 padding: const EdgeInsets.all(10),
                 child: Container(
-                  padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
+                  padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
                   // 2
                   constraints: const BoxConstraints.expand(
-                    width: 300,
-                    height: 80,
+                    width: 280,
+                    height: 64,
                   ),
                   child: Row(
                     children: [Container(
@@ -104,6 +104,18 @@ class _ListMateri extends State<ListMateri> {
                   constraints: const BoxConstraints.expand(
                     width: 300,
                     height: 80,
+                  ),
+                  child: Row(
+                    children: [Container(
+                      height: 28,
+                      width: 28,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        image: DecorationImage(
+                        image: AssetImage('assets/IconBangundatar.png'),
+                        alignment: Alignment.topCenter,
+                        fit: BoxFit.fill),
+                      ),
                   ),
                   child: Text(
                     "Aljabar",

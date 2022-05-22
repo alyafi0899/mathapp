@@ -35,21 +35,70 @@ class _ListMateri extends State<ListMateri> {
             ),
             SizedBox(
               width: double.infinity,
-              height: 200,
+              height: 180,
               child: Container(
                 child: Text(
                   "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-                  style: bodysmall.copyWith(
+                  style: bodylarge.copyWith(
                       color: Color.fromARGB(255, 255, 255, 255)),
                   textAlign: TextAlign.left,
                 ),
               ),
             ),
+
             InkWell(
               child: Container(
                 padding: const EdgeInsets.all(10),
                 child: Container(
-                  padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
+                  padding: const EdgeInsets.fromLTRB(30, 10, 10, 10),
+                  // 2
+                  constraints: const BoxConstraints.expand(
+                    width: 280,
+                    height: 64,
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 28,
+                        width: 28,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          image: DecorationImage(
+                              image: AssetImage('assets/Icon-Aritmatika.png'),
+                              alignment: Alignment.topCenter,
+                              // scale: 2.1,
+                              fit: BoxFit.fill),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Text(
+                        "Aritmatika",
+                        textAlign: TextAlign.center,
+                        style: headlinesmall.copyWith(
+                            color: Color.fromARGB(255, 0, 110, 127)),
+                      ),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                        width: 2, color: Color.fromARGB(255, 0, 110, 127)),
+                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  ),
+                ),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/enroll');
+              },
+            ),
+
+            InkWell(
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                child: Container(
+                  padding: const EdgeInsets.fromLTRB(30, 10, 10, 10),
                   // 2
                   constraints: const BoxConstraints.expand(
                     width: 280,
@@ -96,7 +145,7 @@ class _ListMateri extends State<ListMateri> {
               child: Container(
                 padding: const EdgeInsets.all(10),
                 child: Container(
-                  padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
+                  padding: const EdgeInsets.fromLTRB(30, 10, 10, 10),
                   // 2
                   constraints: const BoxConstraints.expand(
                     width: 280,
@@ -110,7 +159,7 @@ class _ListMateri extends State<ListMateri> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           image: DecorationImage(
-                              image: AssetImage('assets/IconBangundatar.png'),
+                              image: AssetImage('assets/Icon-Bangun-Ruang.png'),
                               alignment: Alignment.topCenter,
                               // scale: 2.1,
                               fit: BoxFit.fill),
@@ -120,7 +169,7 @@ class _ListMateri extends State<ListMateri> {
                         width: 16,
                       ),
                       Text(
-                        "Aljabar",
+                        "Bangun Ruang",
                         textAlign: TextAlign.center,
                         style: headlinesmall.copyWith(
                             color: Color.fromARGB(255, 0, 110, 127)),
@@ -138,6 +187,32 @@ class _ListMateri extends State<ListMateri> {
               onTap: () {
                 Navigator.pushNamed(context, '/enroll');
               },
+            ),
+
+
+// --- Untuk buat footnote 
+            SizedBox(
+              height: 32,
+            ),
+            SizedBox(
+              width: double.infinity,
+              height: 150,
+              child: Container(
+                padding: EdgeInsets.fromLTRB(56, 32, 56, 0),
+                 decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/Icon-question.png'),
+                    alignment: Alignment.topCenter,
+                ),
+                
+              ),
+                child: Text(
+                  "Pilih salah satu materi diatas untuk mulai belajar",
+                  style: bodylarge.copyWith(
+                      color: Color.fromARGB(255, 0, 110, 127)),
+                  textAlign: TextAlign.center,
+                ),
+        ),
             ),
           ],
         ),

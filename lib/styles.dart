@@ -25,6 +25,10 @@ TextStyle headlinelarge = GoogleFonts.poppins(
 );
 
 TextStyle bodysmall = GoogleFonts.poppins(
+  fontSize: 12
+);
+
+TextStyle bodylarge = GoogleFonts.poppins(
   fontSize: 16
 );
 

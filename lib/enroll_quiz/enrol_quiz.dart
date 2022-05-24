@@ -14,24 +14,24 @@ class _Enroll extends State<Enroll> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.fromLTRB(20, 100, 20, 20),
+          padding: const EdgeInsets.fromLTRB(20, 100, 20, 20),
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
                 child: Container(
                   constraints: const BoxConstraints.expand(
                     width: 800,
                     height: 235,
                   ),
                   decoration: BoxDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                         image: AssetImage('assets/tulbar (4).JPG'),
                         fit: BoxFit.cover),
                     color: Colors.white,
                     border: Border.all(width: 2, color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    boxShadow: [
+                    borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+                    boxShadow: const [
                       BoxShadow(
                         color: Color(0xFFBDBDBD),
                         spreadRadius: 0.0001,
@@ -45,20 +45,18 @@ class _Enroll extends State<Enroll> {
               SizedBox(
                 width: double.infinity,
                 height: 100,
-                child: Container(
-                  child: Text(
-                    "Tulbar",
-                    style: GoogleFonts.pangolin(fontSize: 36),
-                    textAlign: TextAlign.left,
-                  ),
+                child: Text(
+                  "Tulbar",
+                  style: GoogleFonts.pangolin(fontSize: 36),
+                  textAlign: TextAlign.left,
                 ),
               ),
               SizedBox(
                 width: double.infinity,
                 height: 100,
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(3, 0, 0, 0),
-                  child: Text(
+                  padding: const EdgeInsets.fromLTRB(3, 0, 0, 0),
+                  child: const Text(
                     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
                     textAlign: TextAlign.left,
                   ),
@@ -67,8 +65,9 @@ class _Enroll extends State<Enroll> {
               SizedBox(
                 width: double.infinity,
                 height: 150,
+                // ignore: avoid_unnecessary_containers
                 child: Container(
-                  child: Text(
+                  child: const Text(
                     "◼️ Aasidiaoiwmdpawmpwam\n◼️ Aasidiaoiwmdpawmpwam\n◼️ Aasidiaoiwmdpawmpwam\n◼️ Aasidiaoiwmdpawmpwam\n◼️ Aasidiaoiwmdpawmpwam",
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
                     textAlign: TextAlign.left,
@@ -85,7 +84,7 @@ class _Enroll extends State<Enroll> {
                       width: 250,
                       height: 70,
                     ),
-                    child: Text(
+                    child: const Text(
                       "Kerjakan Quiz",
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.black, fontSize: 22),
@@ -93,8 +92,9 @@ class _Enroll extends State<Enroll> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(width: 2, color: Colors.black),
-                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                      boxShadow: [
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20.0)),
+                      boxShadow: const [
                         BoxShadow(
                           color: Color(0xFFBDBDBD),
                           spreadRadius: 0.0001,

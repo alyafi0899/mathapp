@@ -90,7 +90,7 @@ class _ListMateri extends State<ListMateri> {
                 ),
               ),
               onTap: () {
-                Navigator.pushNamed(context, '/enroll');
+                Navigator.pushNamed(context, '/popup');
               },
             ),
 

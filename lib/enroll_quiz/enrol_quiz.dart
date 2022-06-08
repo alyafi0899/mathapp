@@ -26,10 +26,10 @@ class _Enroll extends State<Enroll> {
                   ),
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/tulbar (4).JPG'),
+                        image: AssetImage('assets/Bg-Board.png'),
                         fit: BoxFit.cover),
                     color: Colors.white,
-                    border: Border.all(width: 2, color: Colors.black),
+                    border: Border.all(width: 2, color: Colors.transparent),
                     borderRadius: BorderRadius.all(Radius.circular(20.0)),
                     boxShadow: [
                       BoxShadow(
@@ -47,7 +47,7 @@ class _Enroll extends State<Enroll> {
                 height: 100,
                 child: Container(
                   child: Text(
-                    "Tulbar",
+                    "Aritmatika",
                     style: GoogleFonts.pangolin(fontSize: 36),
                     textAlign: TextAlign.left,
                   ),

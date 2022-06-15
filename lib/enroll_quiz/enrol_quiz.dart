@@ -14,11 +14,11 @@ class _Enroll extends State<Enroll> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.fromLTRB(20, 100, 20, 20),
+          padding: const EdgeInsets.fromLTRB(20, 100, 20, 20),
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
                 child: Container(
                   constraints: const BoxConstraints.expand(
                     width: 800,
@@ -29,7 +29,7 @@ class _Enroll extends State<Enroll> {
                         image: AssetImage('assets/Bg-Board.png'),
                         fit: BoxFit.cover),
                     color: Colors.white,
-                    border: Border.all(width: 2, color: Colors.transparent),
+                    border: Border.all(width: 2, color: Colors.black),
                     borderRadius: BorderRadius.all(Radius.circular(20.0)),
                     boxShadow: [
                       BoxShadow(

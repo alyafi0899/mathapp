@@ -12,7 +12,7 @@ class _DaftarQuiz extends State<DaftarQuiz> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.fromLTRB(20, 100, 20, 20),
+        padding: const EdgeInsets.fromLTRB(20, 100, 20, 20),
         child: Column(
           children: [
             InkWell(
@@ -25,7 +25,7 @@ class _DaftarQuiz extends State<DaftarQuiz> {
                     width: 70,
                     height: 70,
                   ),
-                  child: Text(
+                  child: const Text(
                     "Quiz 1",
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.black, fontSize: 12),
@@ -33,8 +33,8 @@ class _DaftarQuiz extends State<DaftarQuiz> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(width: 2, color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    boxShadow: [
+                    borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+                    boxShadow: const [
                       BoxShadow(
                         color: Color(0xFFBDBDBD),
                         spreadRadius: 0.0001,

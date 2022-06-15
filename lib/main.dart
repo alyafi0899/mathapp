@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mathapp/enroll_quiz/daftar_quiz.dart';
 import 'package:mathapp/enroll_quiz/enrol_quiz.dart';
 import 'package:mathapp/list_materi/list_materi_page.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:mathapp/popup/popup.dart';
 import 'package:mathapp/styles.dart';
 
@@ -12,8 +10,8 @@ void main() {
     MaterialApp(
       initialRoute: '/home',
       routes: {
-        '/home': (context) => MyHomePage(title: 'Notification'),
-        '/list_materi': (context) => ListMateri(),
+        '/home': (context) => const MyHomePage(title: 'Notification'),
+        '/list_materi': (context) => const ListMateri(),
         '/enroll': (context) => Enroll(),
         '/daftar_quiz': (context) => DaftarQuiz(),
         '/popup': (context) => Popupmesseges(),
@@ -51,30 +49,30 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(
         child: Container(
-          constraints: BoxConstraints.expand(width: double.infinity),
-          decoration: BoxDecoration(
-              color: Colors.white,
-              image: DecorationImage(
-                  image: AssetImage('assets/Dashboard.png'),
-                  alignment: Alignment.topCenter,
-                  // scale: 2.1,
-                  fit: BoxFit.fill),
-            ),
-          padding: EdgeInsets.fromLTRB(0, 156, 0, 20),
+          constraints: const BoxConstraints.expand(width: double.infinity),
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            image: DecorationImage(
+                image: AssetImage('assets/Dashboard.png'),
+                alignment: Alignment.topCenter,
+                // scale: 2.1,
+                fit: BoxFit.fill),
+          ),
+          padding: const EdgeInsets.fromLTRB(0, 156, 0, 20),
           child: Column(
             children: [
-              // Logo MtkApp 1 
+              // Logo MtkApp 1
               Container(
                 width: 178,
                 height: 172,
-                decoration: BoxDecoration(
-              color: Colors.white,
-              image: DecorationImage(
-                  image: AssetImage('assets/Logo MtkApp.png'),
-                  alignment: Alignment.topCenter,
-                  scale: 2.1,
-                  fit: BoxFit.cover),
-            ),
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  image: DecorationImage(
+                      image: AssetImage('assets/Logo MtkApp.png'),
+                      alignment: Alignment.topCenter,
+                      scale: 2.1,
+                      fit: BoxFit.cover),
+                ),
               ),
               
               SizedBox(

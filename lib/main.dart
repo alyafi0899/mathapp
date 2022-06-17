@@ -12,9 +12,9 @@ void main() {
       routes: {
         '/home': (context) => const MyHomePage(title: 'Notification'),
         '/list_materi': (context) => const ListMateri(),
-        '/enroll': (context) => Enroll(),
-        '/daftar_quiz': (context) => DaftarQuiz(),
-        '/popup': (context) => Popupmesseges(),
+        '/enroll': (context) => const Enroll(),
+        '/daftar_quiz': (context) => const DaftarQuiz(),
+        '/popup': (context) => const Popupmesseges(),
       },
     ),
   );
@@ -74,162 +74,167 @@ class _MyHomePageState extends State<MyHomePage> {
                       fit: BoxFit.cover),
                 ),
               ),
-              
+
               SizedBox(
-              width: double.infinity,
-              height: 40,
-              child: Container(
+                width: double.infinity,
+                height: 40,
                 child: Text(
                   "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
                   style: bodylarge.copyWith(
-                      color: Color.fromARGB(255, 255, 255, 255)),
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                   textAlign: TextAlign.left,
                 ),
               ),
-            ),
 
-               InkWell(
-              child: Container(
-                padding: const EdgeInsets.all(10),
+              InkWell(
                 child: Container(
-                  padding: const EdgeInsets.fromLTRB(30, 10, 10, 10),
-                  // 2
-                  constraints: const BoxConstraints.expand(
-                    width: 280,
-                    height: 64,
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 28,
-                        width: 28,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          image: DecorationImage(
-                              image: AssetImage('assets/Icon-Aritmatika.png'),
-                              alignment: Alignment.topCenter,
-                              // scale: 2.1,
-                              fit: BoxFit.fill),
+                  padding: const EdgeInsets.all(10),
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(30, 10, 10, 10),
+                    // 2
+                    constraints: const BoxConstraints.expand(
+                      width: 280,
+                      height: 64,
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 28,
+                          width: 28,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            image: DecorationImage(
+                                image: AssetImage('assets/Icon-Aritmatika.png'),
+                                alignment: Alignment.topCenter,
+                                // scale: 2.1,
+                                fit: BoxFit.fill),
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 16,
-                      ),
-                      Text(
-                        "Aritmatika",
-                        textAlign: TextAlign.center,
-                        style: headlinesmall.copyWith(
-                            color: Color.fromARGB(255, 0, 110, 127)),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                        width: 2, color: Color.fromARGB(255, 0, 110, 127)),
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        const SizedBox(
+                          width: 16,
+                        ),
+                        Text(
+                          "Aritmatika",
+                          textAlign: TextAlign.center,
+                          style: headlinesmall.copyWith(
+                              color: const Color.fromARGB(255, 0, 110, 127)),
+                        ),
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                          width: 2,
+                          color: const Color.fromARGB(255, 0, 110, 127)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20.0)),
+                    ),
                   ),
                 ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/popup');
+                },
               ),
-              onTap: () {
-                Navigator.pushNamed(context, '/popup');
-              },
-            ),
 
-            InkWell(
-              child: Container(
-                padding: const EdgeInsets.all(10),
+              InkWell(
                 child: Container(
-                  padding: const EdgeInsets.fromLTRB(30, 10, 10, 10),
-                  // 2
-                  constraints: const BoxConstraints.expand(
-                    width: 280,
-                    height: 64,
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 28,
-                        width: 28,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          image: DecorationImage(
-                              image: AssetImage('assets/IconBangundatar.png'),
-                              alignment: Alignment.topCenter,
-                              // scale: 2.1,
-                              fit: BoxFit.fill),
+                  padding: const EdgeInsets.all(10),
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(30, 10, 10, 10),
+                    // 2
+                    constraints: const BoxConstraints.expand(
+                      width: 280,
+                      height: 64,
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 28,
+                          width: 28,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            image: DecorationImage(
+                                image: AssetImage('assets/IconBangundatar.png'),
+                                alignment: Alignment.topCenter,
+                                // scale: 2.1,
+                                fit: BoxFit.fill),
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 16,
-                      ),
-                      Text(
-                        "Bangun Datar",
-                        textAlign: TextAlign.center,
-                        style: headlinesmall.copyWith(
-                            color: Color.fromARGB(255, 0, 110, 127)),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                        width: 2, color: Color.fromARGB(255, 0, 110, 127)),
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        const SizedBox(
+                          width: 16,
+                        ),
+                        Text(
+                          "Bangun Datar",
+                          textAlign: TextAlign.center,
+                          style: headlinesmall.copyWith(
+                              color: const Color.fromARGB(255, 0, 110, 127)),
+                        ),
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                          width: 2,
+                          color: const Color.fromARGB(255, 0, 110, 127)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20.0)),
+                    ),
                   ),
                 ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/enroll');
+                },
               ),
-              onTap: () {
-                Navigator.pushNamed(context, '/enroll');
-              },
-            ),
-            InkWell(
-              child: Container(
-                padding: const EdgeInsets.all(10),
+              InkWell(
                 child: Container(
-                  padding: const EdgeInsets.fromLTRB(30, 10, 10, 10),
-                  // 2
-                  constraints: const BoxConstraints.expand(
-                    width: 280,
-                    height: 64,
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 28,
-                        width: 28,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          image: DecorationImage(
-                              image: AssetImage('assets/Icon-Bangun-Ruang.png'),
-                              alignment: Alignment.topCenter,
-                              // scale: 2.1,
-                              fit: BoxFit.fill),
+                  padding: const EdgeInsets.all(10),
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(30, 10, 10, 10),
+                    // 2
+                    constraints: const BoxConstraints.expand(
+                      width: 280,
+                      height: 64,
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 28,
+                          width: 28,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            image: DecorationImage(
+                                image:
+                                    AssetImage('assets/Icon-Bangun-Ruang.png'),
+                                alignment: Alignment.topCenter,
+                                // scale: 2.1,
+                                fit: BoxFit.fill),
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 16,
-                      ),
-                      Text(
-                        "Bangun Ruang",
-                        textAlign: TextAlign.center,
-                        style: headlinesmall.copyWith(
-                            color: Color.fromARGB(255, 0, 110, 127)),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                        width: 2, color: Color.fromARGB(255, 0, 110, 127)),
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        const SizedBox(
+                          width: 16,
+                        ),
+                        Text(
+                          "Bangun Ruang",
+                          textAlign: TextAlign.center,
+                          style: headlinesmall.copyWith(
+                              color: const Color.fromARGB(255, 0, 110, 127)),
+                        ),
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                          width: 2,
+                          color: const Color.fromARGB(255, 0, 110, 127)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20.0)),
+                    ),
                   ),
                 ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/enroll');
+                },
               ),
-              onTap: () {
-                Navigator.pushNamed(context, '/enroll');
-              },
-            ),
             ],
           ),
         ),

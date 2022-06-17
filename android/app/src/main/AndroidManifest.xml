@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.math_khontod">
+    package="com.example.mathapp">
    <application
-        android:label="math_khontod"
+        android:label="mathapp"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

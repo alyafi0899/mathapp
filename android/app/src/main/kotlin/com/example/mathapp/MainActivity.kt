@@ -1,4 +1,4 @@
-package com.example.math_khontod
+package com.example.mathapp
 
 import io.flutter.embedding.android.FlutterActivity
 

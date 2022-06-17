@@ -9,20 +9,21 @@ class Popupmesseges extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: Container(
-                  width: 178,
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              content: Container(
+                width: 178,
                 height: 172,
-                decoration: BoxDecoration(
-              color: Colors.white,
-              image: DecorationImage(
-                  image: AssetImage('assets/Logo MtkApp.png'),
-                  alignment: Alignment.topCenter,
-                  scale: 2.1,
-                  fit: BoxFit.cover),
-            ),),
-                behavior: SnackBarBehavior.floating,));
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  image: DecorationImage(
+                      image: AssetImage('assets/Logo MtkApp.png'),
+                      alignment: Alignment.topCenter,
+                      scale: 2.1,
+                      fit: BoxFit.cover),
+                ),
+              ),
+              behavior: SnackBarBehavior.floating,
+            ));
           },
           child: const Text("Show messeges"),
         ),

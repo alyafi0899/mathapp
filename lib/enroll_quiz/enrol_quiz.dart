@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mathapp/styles.dart';
 
 
 class Enroll extends StatefulWidget {
@@ -28,15 +29,17 @@ class _Enroll extends State<Enroll> {
                 children: [
                   Image(image: AssetImage('assets/Materi-BD.png')),
                 Container(
-                  padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+                  padding: const EdgeInsets.fromLTRB(24, 10, 24, 0),
                   child: Column(
                     children: [
                           SizedBox(
                           width: double.infinity,
                           height: 50,
                           child: Text(
-                            "Aritmatika",
-                            style: GoogleFonts.pangolin(fontSize: 36),
+                            "Bangun Datar",
+                            style: headlineMedium.copyWith(
+                            color:Colors.white,
+                            fontWeight: FontWeight.bold),
                             textAlign: TextAlign.left,
                           ),
               ),
@@ -45,10 +48,14 @@ class _Enroll extends State<Enroll> {
                 height: 100,
                 child: Container(
                   padding: const EdgeInsets.fromLTRB(3, 0, 0, 0),
-                  child: const Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+                  child: Text(
+                    "Lorem ipsum dolor sit amet, consectetur , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
                     textAlign: TextAlign.left,
+                    style: Labellarge.copyWith(
+                            color:Colors.white),
+                 
                   ),
+                  
                 ),
               ),
                     ],
@@ -58,7 +65,7 @@ class _Enroll extends State<Enroll> {
                 ],
               ),
               
-              height: 380,
+              height: 400,
               // width: Get.width, tidak bisa digunakan
               color: Color.fromARGB(255, 167, 85, 76),
             ),

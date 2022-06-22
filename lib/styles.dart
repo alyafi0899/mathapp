@@ -20,6 +20,10 @@ TextStyle headlinesmall = GoogleFonts.poppins(
   fontSize: 24
 );
 
+TextStyle headlineMedium = GoogleFonts.poppins(
+  fontSize: 28
+);
+
 TextStyle headlinelarge = GoogleFonts.poppins(
   fontSize: 32
 );
@@ -30,6 +34,10 @@ TextStyle bodysmall = GoogleFonts.poppins(
 
 TextStyle bodylarge = GoogleFonts.poppins(
   fontSize: 16
+);
+
+TextStyle Labellarge = GoogleFonts.poppins(
+  fontSize: 14
 );
 
 TextStyle whiteStyle = GoogleFonts.poppins(

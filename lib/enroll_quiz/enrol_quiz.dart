@@ -18,6 +18,8 @@ class _Enroll extends State<Enroll> {
         backgroundColor: Color.fromARGB(255, 167, 85, 76),
         elevation: 0,
       ),
+
+// ---------------------------------- FRAME HEADER ---------------------------------- // 
       body: ListView(
         children: [
           ClipPath(
@@ -69,10 +71,103 @@ class _Enroll extends State<Enroll> {
               // width: Get.width, tidak bisa digunakan
               color: Color.fromARGB(255, 167, 85, 76),
             ),
-          )
-        ],
-      ),
+          ),
+ // ---------------------------------- FRAME HEADER ---------------------------------- //
+        Container(
+          margin: EdgeInsets.fromLTRB(25, 10, 25, 0),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 16,
+                color: Color.fromARGB(127, 158, 158, 158)
+              )
+            ]
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Stack(
+                children: [
+                  Container(
+                    padding: EdgeInsets.fromLTRB(25, 25, 5, 5),
+                    child: Text(
+                      'SKOR KAMU',
+                      style: Labellarge.copyWith(
+                        color: Colors.grey,
+                        
+                      ),
+                      
+                    ),
+                  ),
+
+                  Container(
+                    padding: EdgeInsets.fromLTRB(25, 45, 5, 16),
+                    child: Text(
+                      '250',
+                      style: headlinesmall.copyWith(
+                        color: kprimeColor,
+                        fontWeight: FontWeight.w600
+                      ),
+                      
+                    ),
+                  )
+                ],
+              ),
+              
+            ],
+            
+          ),
+          
+        ),
+        InkWell(
+                child: Container(
+                  padding: const EdgeInsets.all(56),
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    // 2
+                    constraints: const BoxConstraints.expand(
+                      width: 150,
+                      height: 64,
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 28,
+                          width: 28,
+                        ),
+                        const SizedBox(
+                          width: 16,
+                        ),
+                        Text(
+                          "DAFTAR KUIS",
+                          textAlign: TextAlign.center,
+                          style: headlinesmall.copyWith(
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                      color: kprimeColor,
+                      border: Border.all(
+                          width: 2,
+                          color: const Color.fromARGB(255, 0, 110, 127)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20.0)),
+                    ),
+                  ),
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/enroll');
+                },
+              ),
+        ]  
+        ),
+      
         
+
+  
       // SingleChildScrollView(
       //   child: Container(
       //     padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),

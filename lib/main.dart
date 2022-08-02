@@ -1,7 +1,11 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:mathapp/enroll_quiz/daftar_quiz.dart';
 import 'package:mathapp/enroll_quiz/enrol_quiz.dart';
 import 'package:mathapp/list_materi/list_materi_page.dart';
+import 'package:mathapp/enroll_quiz/daftar_quiz_operasi.dart';
+import 'package:mathapp/enroll_quiz/detail_quiz.dart';
 import 'package:mathapp/styles.dart';
 
 void main() {
@@ -13,6 +17,8 @@ void main() {
         '/list_materi': (context) => const ListMateri(),
         '/enroll': (context) => const Enroll(),
         '/daftar_quiz': (context) => const DaftarQuiz(),
+        '/menu': (context) => const Menu(),
+        '/detail_quiz': (context) => const DetailQuiz(index: 5),
       },
     ),
   );
@@ -25,7 +31,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      //title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
@@ -72,76 +79,111 @@ class _MyHomePageState extends State<MyHomePage> {
                       fit: BoxFit.cover),
                 ),
               ),
-              InkWell(
-                child: Container(
-                  padding: const EdgeInsets.fromLTRB(0, 64, 0, 0),
-                  child: Container(
-                    padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
-                    // 2
-                    constraints: const BoxConstraints.expand(
-                      width: 280,
-                      height: 64,
-                    ),
-                    child: Text(
-                      "Material",
-                      textAlign: TextAlign.center,
-                      style: blackStyle.copyWith(
-                        color: kwhiteColor,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 0, 110, 127), // #A0BCC2
-                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0xFFBDBDBD),
-                          spreadRadius: 0.0001,
-                          blurRadius: 10,
-                          offset: Offset(5, 5), // changes position of shadow
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                onTap: () {
-                  Navigator.pushNamed(context, '/list_materi');
-                },
+              SizedBox(
+                height: 64,
               ),
               InkWell(
                 child: Container(
-                  padding: const EdgeInsets.all(16),
-                  child: Container(
-                    padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
-                    // 2
-                    constraints: const BoxConstraints.expand(
-                      width: 280,
-                      height: 64,
+                  padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
+                  // 2
+                  constraints: const BoxConstraints.expand(
+                    width: 280,
+                    height: 64,
+                  ),
+                  child: Text(
+                    "Aritmetika",
+                    textAlign: TextAlign.center,
+                    style: blackStyle.copyWith(
+                      color: kwhiteColor,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
                     ),
-                    child: Text(
-                      "Quiz",
-                      textAlign: TextAlign.center,
-                      style: headlinesmall.copyWith(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          fontWeight: FontWeight.bold),
-                    ),
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 208, 106, 95), // #A0BCC2
-                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0xFFBDBDBD),
-                          spreadRadius: 0.0001,
-                          blurRadius: 10,
-                          offset: Offset(5, 5), // changes position of shadow
-                        ),
-                      ],
-                    ),
+                  ),
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 0, 110, 127), // #A0BCC2
+                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xFFBDBDBD),
+                        spreadRadius: 0.0001,
+                        blurRadius: 10,
+                        offset: Offset(5, 5), // changes position of shadow
+                      ),
+                    ],
                   ),
                 ),
                 onTap: () {
-                  Navigator.pushNamed(context, '/list_materi');
+                  Navigator.pushNamed(context, '/enroll');
+                },
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              InkWell(
+                child: Container(
+                  padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
+                  // 2
+                  constraints: const BoxConstraints.expand(
+                    width: 280,
+                    height: 64,
+                  ),
+                  child: Text(
+                    "Bangun Ruang",
+                    textAlign: TextAlign.center,
+                    style: headlinesmall.copyWith(
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.bold),
+                  ),
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 209, 106, 95), // #A0BCC2
+                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xFFBDBDBD),
+                        spreadRadius: 0.0001,
+                        blurRadius: 10,
+                        offset: Offset(5, 5), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/menu');
+                },
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              InkWell(
+                child: Container(
+                  padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
+                  // 2
+                  constraints: const BoxConstraints.expand(
+                    width: 280,
+                    height: 64,
+                  ),
+                  child: Text(
+                    "Bangun Datar",
+                    textAlign: TextAlign.center,
+                    style: headlinesmall.copyWith(
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.bold),
+                  ),
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 209, 106, 95), // #A0BCC2
+                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xFFBDBDBD),
+                        spreadRadius: 0.0001,
+                        blurRadius: 10,
+                        offset: Offset(5, 5), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/enroll');
                 },
               ),
             ],
